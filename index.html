@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+>
+
+<title>Սևակի Ատամհատիկ</title>
+
+
+<!-- =====================================================
+     MOBILE / ANDROID / IOS SETTINGS
+====================================================== -->
+
+<meta name="theme-color" content="#fffdf9">
+
+<meta name="color-scheme" content="light">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="default"
+>
+
+<meta
+    name="apple-mobile-web-app-title"
+    content="Սևակի Ատամհատիկ"
+>
+
+<meta
+    name="format-detection"
+    content="telephone=no"
+>
+
+
+<!-- =====================================================
+     SOCIAL MEDIA LINK PREVIEW
+     
+     IMPORTANT:
+     meta.jpg must be inside:
+     assets/meta.jpg
+====================================================== -->
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    property="og:title"
+    content="Սևակի Ատամհատիկ"
+>
+
+<meta
+    property="og:description"
+    content="Սևակի 7 ամսեկանի Ատամհատիկը — 13 Հոկտեմբերի 2026, 17:00"
+>
+
+<meta
+    property="og:image"
+    content="assets/meta.jpg"
+>
+
+<meta
+    property="og:image:alt"
+    content="Սևակի Ատամհատիկ"
+>
+
+<meta
+    property="og:image:type"
+    content="image/jpeg"
+>
+
+<meta
+    property="og:image:width"
+    content="1200"
+>
+
+<meta
+    property="og:image:height"
+    content="630"
+>
+
+<meta
+    property="og:locale"
+    content="hy_AM"
+>
+
+
+<!-- =====================================================
+     TWITTER / X PREVIEW
+====================================================== -->
+
+<meta
+    name="twitter:card"
+    content="summary_large_image"
+>
+
+<meta
+    name="twitter:title"
+    content="Սևակի Ատամհատիկ"
+>
+
+<meta
+    name="twitter:description"
+    content="Սևակի 7 ամսեկանի Ատամհատիկը — 13 Հոկտեմբերի 2026, 17:00"
+>
+
+<meta
+    name="twitter:image"
+    content="assets/meta.jpg"
+>
+
+<meta
+    name="twitter:image:alt"
+    content="Սևակի Ատամհատիկ"
+>
+
+
+<!-- =====================================================
+     FONT
+====================================================== -->
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;600;800&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+/* =====================================================
+   ROOT
+====================================================== */
+
+:root{
+    --ink:#111;
+    --accent:#b8643a;
+    --green:#a3a947;
+    --sage:#d6dcae;
+    --sand:#f6dfb4;
+    --bg:#fff;
+}
+
+
+/* =====================================================
+   RESET
+====================================================== */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+
+html,
+body{
+    background:var(--bg);
+    color:var(--ink);
+
+    font-family:
+        'Noto Sans Armenian',
+        Arial,
+        sans-serif;
+
+    overflow-x:hidden;
+
+    padding-bottom:
+        env(safe-area-inset-bottom);
+}
+
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+
+/* =====================================================
+   DECORATIONS
+====================================================== */
+
+.deco{
+    position:absolute;
+
+    pointer-events:none;
+
+    opacity:.9;
+}
+
+
+/* =====================================================
+   HERO
+====================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    padding:
+        60px
+        4vw
+        20px;
+
+    gap:2vw;
+}
+
+
+/* =====================================================
+   FIRST PHOTO
+====================================================== */
+
+.tooth-wrap{
+
+    position:relative;
+
+    justify-self:center;
+
+    width:min(34vw,500px);
+
+    margin-top:70px;
+}
+
+
+.tooth-photo{
+
+    width:100%;
+
+    aspect-ratio:577/640;
+
+    object-fit:cover;
+
+    clip-path:url(#toothClip);
+}
+
+
+/* =====================================================
+   CURVED TEXT
+====================================================== */
+
+.arc{
+
+    position:absolute;
+
+    top:-70px;
+
+    left:30%;
+
+    width:75%;
+
+    overflow:visible;
+}
+
+
+.arc text{
+
+    font-size:46px;
+
+    font-weight:300;
+
+    fill:var(--ink);
+}
+
+
+/* =====================================================
+   SECOND PHOTO
+====================================================== */
+
+.seven-wrap{
+
+    position:relative;
+
+    justify-self:center;
+
+    width:min(36vw,540px);
+
+    margin-top:50px;
+
+    text-align:center;
+}
+
+
+.seven-photo{
+
+    width:88%;
+
+    aspect-ratio:1/1.15;
+
+    object-fit:cover;
+
+    object-position:var(--pos,60% 85%);
+
+    display:block;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            100% 20%,
+            62% 100%,
+            16% 100%,
+            58% 36%,
+            0 36%
+        );
+}
+
+
+/* =====================================================
+   7 MONTHS
+====================================================== */
+
+.vertical{
+
+    position:absolute;
+
+    right:0;
+
+    top:34%;
+
+    writing-mode:vertical-rl;
+
+    font-size:
+        clamp(24px,2.8vw,44px);
+
+    font-weight:300;
+
+    letter-spacing:2px;
+
+    white-space:nowrap;
+}
+
+
+/* =====================================================
+   NAME
+====================================================== */
+
+.name{
+
+    font-size:
+        clamp(44px,6vw,96px);
+
+    font-weight:300;
+
+    letter-spacing:6px;
+
+    margin-top:18px;
+
+    line-height:1;
+
+    padding-right:12%;
+}
+
+
+/* =====================================================
+   INVITATION
+====================================================== */
+
+.invite{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:
+        30px
+        20px
+        60px;
+}
+
+
+.invite h2{
+
+    font-size:
+        clamp(22px,2.4vw,32px);
+
+    font-weight:600;
+
+    margin-bottom:28px;
+}
+
+
+.invite p{
+
+    max-width:560px;
+
+    margin:0 auto;
+
+    font-size:
+        clamp(16px,1.6vw,20px);
+
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   DATE
+====================================================== */
+
+.date{
+
+    font-size:
+        clamp(34px,5vw,64px);
+
+    font-weight:800;
+
+    color:var(--accent);
+
+    margin-top:50px;
+}
+
+
+/* =====================================================
+   TIME
+====================================================== */
+
+.time{
+
+    font-size:
+        clamp(34px,5vw,64px);
+
+    font-weight:800;
+
+    color:var(--accent);
+
+    margin-top:20px;
+}
+
+
+/* =====================================================
+   LOCATION PIN
+====================================================== */
+
+.pin{
+
+    width:44px;
+
+    margin:
+        40px auto
+        14px;
+}
+
+
+.place{
+
+    font-size:
+        clamp(18px,1.8vw,24px);
+
+    font-weight:400;
+}
+
+
+/* =====================================================
+   FOOTER
+====================================================== */
+
+footer{
+
+    background:#eef0df;
+
+    text-align:center;
+
+    padding:
+        36px
+        20px;
+
+    font-size:16px;
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+====================================================== */
+
+#musicBtn{
+
+    position:fixed;
+
+    right:24px;
+
+    bottom:
+        calc(
+            24px +
+            env(safe-area-inset-bottom)
+        );
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:50%;
+
+    border:1px solid #ddd;
+
+    background:#fff;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,.18);
+
+    cursor:pointer;
+
+    display:grid;
+
+    place-items:center;
+
+    z-index:50;
+}
+
+
+#musicBtn span{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:#111;
+
+    display:grid;
+
+    place-items:center;
+}
+
+
+#musicBtn svg{
+
+    width:26px;
+
+    height:26px;
+
+    fill:#fff;
+}
+
+
+#musicBtn.playing span{
+
+    animation:
+        pulse 1.6s infinite;
+}
+
+
+@keyframes pulse{
+
+    0%,
+    100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.1);
+    }
+}
+
+
+/* =====================================================
+   DECORATIVE IMAGES
+====================================================== */
+
+.g{
+    left:1%;
+    top:14%;
+    width:80px;
+}
+
+
+.tt{
+    left:47%;
+    top:2%;
+    width:90px;
+}
+
+
+.gr{
+    right:1%;
+    top:2%;
+    width:150px;
+}
+
+
+.pc{
+    left:49%;
+    top:56%;
+    width:80px;
+}
+
+
+.tb{
+    left:44%;
+    top:74%;
+    width:120px;
+}
+
+
+.st{
+    left:0;
+    bottom:2%;
+    width:130px;
+}
+
+
+.pl{
+    right:3%;
+    top:30%;
+    width:240px;
+}
+
+
+.bk{
+    left:4%;
+    top:40%;
+    width:260px;
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media(max-width:800px){
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        padding-top:90px;
+
+        gap:50px;
+    }
+
+
+    .tooth-wrap{
+        width:80vw;
+    }
+
+
+    .seven-wrap{
+        width:86vw;
+    }
+
+
+    .vertical{
+        font-size:26px;
+    }
+
+
+    .arc text{
+        font-size:40px;
+    }
+
+
+    .arc{
+        top:-60px;
+    }
+
+
+    .deco{
+
+        width:70px!important;
+
+        opacity:.6;
+    }
+
+
+    #musicBtn{
+
+        width:58px;
+
+        height:58px;
+
+        right:14px;
+
+        bottom:
+            calc(
+                14px +
+                env(safe-area-inset-bottom)
+            );
+    }
+
+
+    #musicBtn span{
+
+        width:44px;
+
+        height:44px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+====================================================== */
+
+@media(max-width:400px){
+
+    .invite{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SVG TOOTH CLIP
+====================================================== -->
+
+<svg
+    width="0"
+    height="0"
+    style="position:absolute"
+    aria-hidden="true"
+>
+
+    <defs>
+
+        <clipPath
+            id="toothClip"
+            clipPathUnits="objectBoundingBox"
+        >
+
+            <path
+                d="
+                M0.15,0.05
+                C0.3,0 0.4,0.08 0.5,0.08
+                C0.6,0.08 0.7,0 0.85,0.05
+                C1,0.1 1,0.35 0.95,0.55
+                C0.9,0.75 0.85,1 0.72,1
+                C0.62,1 0.58,0.7 0.5,0.7
+                C0.42,0.7 0.38,1 0.28,1
+                C0.15,1 0.1,0.75 0.05,0.55
+                C0,0.35 0,0.1 0.15,0.05
+                Z
+                "
+            />
+
+        </clipPath>
+
+    </defs>
+
+</svg>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+
+    <img
+        class="deco g"
+        src="assets/guitar.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+    <img
+        class="deco tt"
+        src="assets/tooth.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+    <img
+        class="deco gr"
+        src="assets/graduation.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+    <img
+        class="deco pc"
+        src="assets/pencils.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+    <img
+        class="deco tb"
+        src="assets/toothbrush.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+    <img
+        class="deco st"
+        src="assets/stethoscope.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+
+    <!-- =================================================
+         FIRST PHOTO
+    ================================================== -->
+
+    <div class="tooth-wrap">
+
+
+        <svg
+            class="arc"
+            viewBox="0 0 400 200"
+            aria-hidden="true"
+        >
+
+            <path
+                id="arcPath"
+                d="M0,60 Q200,-40 380,150"
+                fill="none"
+            />
+
+
+            <text>
+
+                <textPath
+                    href="#arcPath"
+                >
+                    1-ին ատամիկ
+                </textPath>
+
+            </text>
+
+        </svg>
+
+
+        <img
+            class="tooth-photo"
+            src="assets/baby-tooth.jpg"
+            alt="Սևակ"
+        >
+
+    </div>
+
+
+
+    <!-- =================================================
+         SECOND PHOTO
+    ================================================== -->
+
+    <div class="seven-wrap">
+
+
+        <img
+            class="seven-photo"
+            src="assets/baby-seven.jpg"
+            alt="Սևակ"
+        >
+
+
+        <div class="vertical">
+            7 ամսական
+        </div>
+
+
+        <div class="name">
+            ՍԵՎԱԿ
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INVITATION
+====================================================== -->
+
+<section class="invite">
+
+
+    <img
+        class="deco pl"
+        src="assets/palette.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+    <img
+        class="deco bk"
+        src="assets/book.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+    <h2>
+        Դուք հրավիրված եք
+    </h2>
+
+
+    <p>
+
+        Մեր ընտանիքում կրկնակի տոն է։
+        Մեր Սևակն արդեն ատամիկ ունի
+        և դառնում է 7 ամսական։
+        Ցանկանում ենք, որ դուք էլ
+        դառնաք այդ գեղեցիկ և
+        անմոռանալի օրվա մի մասը։
+
+    </p>
+
+
+    <p
+        style="
+            margin-top:18px;
+            font-weight:600
+        "
+    >
+        Բերեք ձեզ հետ ժպիտներ
+    </p>
+
+
+    <div class="date">
+        13 ՀՈԿՏԵՄԲԵՐԻ 2026
+    </div>
+
+
+    <div class="time">
+        17:00
+    </div>
+
+
+    <img
+        class="pin"
+        src="assets/pin.png"
+        alt=""
+        onerror="this.remove()"
+    >
+
+
+    <div class="place">
+        Հասցե՝ Օդանավակայանի 4-րդ փ․ տուն 18
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+    Սպասում ենք ձեզ
+</footer>
+
+
+
+<!-- =====================================================
+     MUSIC
+====================================================== -->
+
+<audio
+    id="bgm"
+    src="assets/music.mp4"
+    loop
+    preload="auto"
+>
+</audio>
+
+
+
+<!-- =====================================================
+     MUSIC BUTTON
+====================================================== -->
+
+<button
+    id="musicBtn"
+    aria-label="Երաժշտություն"
+    type="button"
+>
+
+    <span>
+
+
+        <!-- MUSIC ON -->
+
+        <svg
+            id="icoOn"
+            viewBox="0 0 24 24"
+        >
+
+            <path
+                d="
+                M3 9v6h4l5 5V4L7 9H3zm13.5 3
+                a4.5 4.5 0 0 0-2.5-4v8
+                a4.5 4.5 0 0 0 2.5-4z
+                M14 3.2v2.1
+                a7 7 0 0 1 0 13.4v2.1
+                a9 9 0 0 0 0-17.6z
+                "
+            />
+
+        </svg>
+
+
+
+        <!-- MUSIC OFF -->
+
+        <svg
+            id="icoOff"
+            viewBox="0 0 24 24"
+            style="display:none"
+        >
+
+            <path
+                d="
+                M16.5 12
+                a4.5 4.5 0 0 0-2.5-4v2.2l2.5 2.5z
+                M19 12
+                a7 7 0 0 1-.9 3.4l1.5 1.5
+                A9 9 0 0 0 21 12
+                a9 9 0 0 0-7-8.8v2.1
+                A7 7 0 0 1 19 12z
+                M4.3 3L3 4.3 7.7 9H3v6h4l5 5v-6.7
+                l4.3 4.3
+                c-.7.5-1.4.9-2.3 1.1v2.1
+                a9 9 0 0 0 3.7-1.8l2 2
+                1.3-1.3L4.3 3z
+                M12 4L9.9 6.1 12 8.2V4z
+                "
+            />
+
+        </svg>
+
+    </span>
+
+</button>
+
+
+
+<script>
+
+/* =====================================================
+   BACKGROUND MUSIC
+====================================================== */
+
+(function(){
+
+    var audio =
+        document.getElementById('bgm');
+
+    var btn =
+        document.getElementById('musicBtn');
+
+    var on =
+        document.getElementById('icoOn');
+
+    var off =
+        document.getElementById('icoOff');
+
+
+    var userPaused = false;
+
+
+    audio.volume = 0.7;
+
+
+    function updateMusicUI(playing){
+
+        btn.classList.toggle(
+            'playing',
+            playing
+        );
+
+
+        on.style.display =
+            playing ? '' : 'none';
+
+
+        off.style.display =
+            playing ? 'none' : '';
+
+    }
+
+
+    function startMusic(){
+
+        if(userPaused){
+            return;
+        }
+
+
+        var promise =
+            audio.play();
+
+
+        if(
+            promise &&
+            promise.then
+        ){
+
+            promise
+                .then(function(){
+
+                    updateMusicUI(true);
+
+                    removeUnlockListeners();
+
+                })
+                .catch(function(){
+
+                    /*
+                     Browser-ը կարող է
+                     autoplay-ը արգելել։
+                    */
+
+                    updateMusicUI(false);
+
+                });
+
+        }
+
+    }
+
+
+    var events = [
+        'click',
+        'touchstart',
+        'keydown',
+        'scroll',
+        'mousemove'
+    ];
+
+
+    function unlockMusic(){
+
+        startMusic();
+
+    }
+
+
+    function removeUnlockListeners(){
+
+        events.forEach(
+            function(event){
+
+                window.removeEventListener(
+                    event,
+                    unlockMusic
+                );
+
+            }
+        );
+
+    }
+
+
+    events.forEach(
+        function(event){
+
+            window.addEventListener(
+                event,
+                unlockMusic,
+                {
+                    passive:true
+                }
+            );
+
+        }
+    );
+
+
+    window.addEventListener(
+        'load',
+        startMusic
+    );
+
+
+    startMusic();
+
+
+    btn.addEventListener(
+        'click',
+        function(event){
+
+            event.stopPropagation();
+
+
+            if(audio.paused){
+
+                userPaused = false;
+
+
+                audio
+                    .play()
+                    .then(function(){
+
+                        updateMusicUI(true);
+
+                    })
+                    .catch(function(){
+
+                        updateMusicUI(false);
+
+                    });
+
+            }
+
+            else{
+
+                userPaused = true;
+
+                audio.pause();
+
+                updateMusicUI(false);
+
+            }
+
+        }
+    );
+
+
+    updateMusicUI(false);
+
+})();
+
+</script>
+
+
+</body>
+</html>
